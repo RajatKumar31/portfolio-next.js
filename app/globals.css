@@ -57,7 +57,8 @@
 	--secondary-foreground: oklch(0.205 0 0);
 	--muted: oklch(0.97 0 0);
 	--muted-foreground: oklch(0.556 0 0);
-	--accent: oklch(0.97 0 0);
+	--accent: #00ff99;
+	--accent-hover: #00e187;
 	--accent-foreground: oklch(0.205 0 0);
 	--destructive: oklch(0.577 0.245 27.325);
 	--border: oklch(0.922 0 0);
@@ -113,8 +114,27 @@
 }
 
 
-body {
-	font-family: var(--font-jetbrainsMono);
-	background-color: var(--background);
-	color: white;
+/* body { */
+/* 	font-family: var(--font-jetbrainsMono); */
+/* 	background-color: var(--background); */
+/* 	color: white; */
+/* } */
+
+@layer base {
+	body {
+		font-family: var(--font-jetbrainsMono);
+		@apply text-white leading-loose bg-[var(--background)];
+	}
+
+	h1 {
+		@apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+	}
+
+	h2 {
+		@apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+	}
+
+	h3 {
+		@apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+	}
 }
